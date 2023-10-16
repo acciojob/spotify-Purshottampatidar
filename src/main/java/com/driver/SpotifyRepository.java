@@ -324,14 +324,14 @@ public class SpotifyRepository {
 
     public String mostPopularSong() {
         int max=0;
-        String songName="";
+        String songN="";
         for(Song song: songLikeMap.keySet()){
             List<User> userlist=songLikeMap.get(song);
             if(userlist.size()>max){
                 max=userlist.size();
-                songName=song.getTitle();
+                songN=song.getTitle();
             }
         }
-        return songName;
+        return songN;
     }
 }
